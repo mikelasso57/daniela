@@ -1,21 +1,20 @@
-FROM python:3.10-slim-buster
+Da Python: 3.10-Slim-Buster
 
-# Set the working directory in the container to /app
-WORKDIR /app
+# Imposta la directory di lavoro nel contenitore su /app
+Workdir /app
 
-# Install git
-RUN apt-get update && apt-get install -y git
+# Installa Git
+CORRERE APT-EGT AGGIORNAMENTO &amp;&amp; Apt-get Installa -y git
 
-# Clone the repository
-RUN git clone https://github.com/YourUsername/YourRepoName.git .
+# Clona il RepositoryCorrere git clone https://github.com/mikelasso57/daniela
 
-# Copy the local config.json file to the container
+# Copia il file config.json locale nel contenitore
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Installa tutti i pacchetti necessari specificati in requisiti.txt
+CORRERI PIP Installa
 
 
-EXPOSE 8888
+Esporre 8888
 
-# Run run.py when the container launches
-CMD ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
+# Run run.py quando il container viene lanciato
+Cmd ["uvicorn", "Esegui: Main_App", "--Ospite", "0.0.0.0", "--porta", "8888", "--lavoratori", "4"]
